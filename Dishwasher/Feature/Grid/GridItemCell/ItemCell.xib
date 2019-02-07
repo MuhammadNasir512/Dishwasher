@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ItemCell" id="g3d-B5-KKM" customClass="ItemCell" customModule="MoCollectionView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="246" height="336"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="246" height="336"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="fcx-Hv-343">
+                        <rect key="frame" x="20" y="40" width="206" height="210"/>
+                        <color key="backgroundColor" red="0.91336366449999995" green="0.95686274510000002" blue="0.88051190749999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="210" id="hvz-Xr-M8Y"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlL-zN-7aa">
+                        <rect key="frame" x="20" y="270" width="206" height="20.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="85" id="ns8-V4-cUN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dio-GB-rE3">
+                        <rect key="frame" x="20" y="295.5" width="206" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="pCn-KZ-L39"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="dio-GB-rE3" firstAttribute="leading" secondItem="vlL-zN-7aa" secondAttribute="leading" id="0z5-bd-vWy"/>
+                <constraint firstItem="fcx-Hv-343" firstAttribute="top" secondItem="g3d-B5-KKM" secondAttribute="top" constant="40" id="8R1-Ur-Y6A"/>
+                <constraint firstItem="fcx-Hv-343" firstAttribute="leading" secondItem="g3d-B5-KKM" secondAttribute="leading" constant="20" id="C6U-If-xGD"/>
+                <constraint firstItem="vlL-zN-7aa" firstAttribute="leading" secondItem="g3d-B5-KKM" secondAttribute="leading" constant="20" id="Dyh-KI-OhS"/>
+                <constraint firstAttribute="bottom" secondItem="dio-GB-rE3" secondAttribute="bottom" priority="250" constant="20" id="Qe7-Du-BL3"/>
+                <constraint firstAttribute="trailing" secondItem="fcx-Hv-343" secondAttribute="trailing" constant="20" id="Tg1-nn-25k"/>
+                <constraint firstItem="dio-GB-rE3" firstAttribute="top" secondItem="vlL-zN-7aa" secondAttribute="bottom" constant="5" id="YOS-Av-UrW"/>
+                <constraint firstAttribute="leading" secondItem="vlL-zN-7aa" secondAttribute="trailing" constant="-226" id="gGf-1u-NPG"/>
+                <constraint firstItem="dio-GB-rE3" firstAttribute="trailing" secondItem="vlL-zN-7aa" secondAttribute="trailing" id="qXF-Yq-blD"/>
+                <constraint firstItem="vlL-zN-7aa" firstAttribute="top" secondItem="fcx-Hv-343" secondAttribute="bottom" constant="20" id="sGr-K2-xhm"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="c3D-QR-bcl"/>
+            <size key="customSize" width="246" height="336"/>
+            <connections>
+                <outlet property="iconImageView" destination="fcx-Hv-343" id="VfF-ah-bei"/>
+                <outlet property="subtitleLabel" destination="dio-GB-rE3" id="vcx-9P-Iro"/>
+                <outlet property="titleLabel" destination="vlL-zN-7aa" id="A7Y-bE-4Tr"/>
+            </connections>
+            <point key="canvasLocation" x="78.400000000000006" y="125.93703148425789"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Placeholder" width="500" height="500"/>
+    </resources>
+</document>
